@@ -1,0 +1,15 @@
+[loom.asset] Starting file watcher thread...
+[loom.asset]    o OK!
+[loom.asset] Starting socket listener thread...
+[loom.asset]    o OK!
+[loom.asset] Listening on port 12340
+[loom.asset]    o OK!
+[loom.asset] Client connected (4)!
+[asset.protocol] LOG: [loom.application]    o Connected to asset agent.
+[asset.protocol] LOG: [loom.application] LOOM Built Feb 26 2013 12:06:32
+[asset.protocol] LOG: initializing config
+[asset.protocol] LOG: [cocos.CCTexture2D] loading assets/fps_images.png
+[asset.protocol] LOG: Command manager online.
+[asset.protocol] LOG: [cocos.CCTexture2D] loading assets/greenblob.png
+[loom.asset] SENDING       -  src/EightWayLoom.ls
+[loom.asset] SENDING       -  bin/Main.loom
