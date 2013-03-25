@@ -1,0 +1,211 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+
+    <style>
+
+    body {
+        -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+        -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+        -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+        background-color:#92931d;
+        background-image: url('images/background.png');
+
+        margin:0px;
+        padding:0px;
+
+        width:100%;
+        height:100%;
+        max-width: 100%;
+        max-height:100%;
+        overflow: hidden;
+    }
+
+    #hero{
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        position: absolute;
+        top:0px;
+        left:0px;
+    }
+    .hero_0_0{ background: url('images/8way.png'); background-position:0px 0px;}
+    .hero_0_1{ background: url('images/8way.png'); background-position:0px 80px;}
+    .hero_0_2{ background: url('images/8way.png'); background-position:0px 160px;}
+    .hero_0_3{ background: url('images/8way.png'); background-position:0px 240px;}
+    .hero_0_4{ background: url('images/8way.png'); background-position:0px 320px;}
+    .hero_0_5{ background: url('images/8way.png'); background-position:0px 400px;}
+    .hero_0_6{ background: url('images/8way.png'); background-position:0px 480px;}
+    .hero_0_7{ background: url('images/8way.png'); background-position:0px 560px;}
+    .hero_1_0{ background: url('images/8way.png'); background-position:80px 0px;}
+    .hero_1_1{ background: url('images/8way.png'); background-position:80px 80px;}
+    .hero_1_2{ background: url('images/8way.png'); background-position:80px 160px;}
+    .hero_1_3{ background: url('images/8way.png'); background-position:80px 240px;}
+    .hero_1_4{ background: url('images/8way.png'); background-position:80px 320px;}
+    .hero_1_5{ background: url('images/8way.png'); background-position:80px 400px;}
+    .hero_1_6{ background: url('images/8way.png'); background-position:80px 480px;}
+    .hero_1_7{ background: url('images/8way.png'); background-position:80px 560px;}
+    .hero_2_0{ background: url('images/8way.png'); background-position:160px 0px;}
+    .hero_2_1{ background: url('images/8way.png'); background-position:160px 80px;}
+    .hero_2_2{ background: url('images/8way.png'); background-position:160px 160px;}
+    .hero_2_3{ background: url('images/8way.png'); background-position:160px 240px;}
+    .hero_2_4{ background: url('images/8way.png'); background-position:160px 320px;}
+    .hero_2_5{ background: url('images/8way.png'); background-position:160px 400px;}
+    .hero_2_6{ background: url('images/8way.png'); background-position:160px 480px;}
+    .hero_2_7{ background: url('images/8way.png'); background-position:160px 560px;}
+    .hero_3_0{ background: url('images/8way.png'); background-position:240px 0px;}
+    .hero_3_1{ background: url('images/8way.png'); background-position:240px 80px;}
+    .hero_3_2{ background: url('images/8way.png'); background-position:240px 160px;}
+    .hero_3_3{ background: url('images/8way.png'); background-position:240px 240px;}
+    .hero_3_4{ background: url('images/8way.png'); background-position:240px 320px;}
+    .hero_3_5{ background: url('images/8way.png'); background-position:240px 400px;}
+    .hero_3_6{ background: url('images/8way.png'); background-position:240px 480px;}
+    .hero_3_7{ background: url('images/8way.png'); background-position:240px 560px;}
+    .hero_4_0{ background: url('images/8way.png'); background-position:320px 0px;}
+    .hero_4_1{ background: url('images/8way.png'); background-position:320px 80px;}
+    .hero_4_2{ background: url('images/8way.png'); background-position:320px 160px;}
+    .hero_4_3{ background: url('images/8way.png'); background-position:320px 240px;}
+    .hero_4_4{ background: url('images/8way.png'); background-position:320px 320px;}
+    .hero_4_5{ background: url('images/8way.png'); background-position:320px 400px;}
+    .hero_4_6{ background: url('images/8way.png'); background-position:320px 480px;}
+    .hero_4_7{ background: url('images/8way.png'); background-position:320px 560px;}
+    .hero_5_0{ background: url('images/8way.png'); background-position:400px 0px;}
+    .hero_5_1{ background: url('images/8way.png'); background-position:400px 80px;}
+    .hero_5_2{ background: url('images/8way.png'); background-position:400px 160px;}
+    .hero_5_3{ background: url('images/8way.png'); background-position:400px 240px;}
+    .hero_5_4{ background: url('images/8way.png'); background-position:400px 320px;}
+    .hero_5_5{ background: url('images/8way.png'); background-position:400px 400px;}
+    .hero_5_6{ background: url('images/8way.png'); background-position:400px 480px;}
+    .hero_5_7{ background: url('images/8way.png'); background-position:400px 560px;}
+    .hero_6_0{ background: url('images/8way.png'); background-position:480px 0px;}
+    .hero_6_1{ background: url('images/8way.png'); background-position:480px 80px;}
+    .hero_6_2{ background: url('images/8way.png'); background-position:480px 160px;}
+    .hero_6_3{ background: url('images/8way.png'); background-position:480px 240px;}
+    .hero_6_4{ background: url('images/8way.png'); background-position:480px 320px;}
+    .hero_6_5{ background: url('images/8way.png'); background-position:480px 400px;}
+    .hero_6_6{ background: url('images/8way.png'); background-position:480px 480px;}
+    .hero_6_7{ background: url('images/8way.png'); background-position:480px 560px;}
+    .hero_7_0{ background: url('images/8way.png'); background-position:560px 0px;}
+    .hero_7_1{ background: url('images/8way.png'); background-position:560px 80px;}
+    .hero_7_2{ background: url('images/8way.png'); background-position:560px 160px;}
+    .hero_7_3{ background: url('images/8way.png'); background-position:560px 240px;}
+    .hero_7_4{ background: url('images/8way.png'); background-position:560px 320px;}
+    .hero_7_5{ background: url('images/8way.png'); background-position:560px 400px;}
+    .hero_7_6{ background: url('images/8way.png'); background-position:560px 480px;}
+    .hero_7_7{ background: url('images/8way.png'); background-position:560px 560px;}
+    </style>
+    <script src="zepto.js"></script>
+    <script>
+    requestAnimFrame = (function() {
+      return window.requestAnimationFrame ||
+         window.webkitRequestAnimationFrame ||
+         window.mozRequestAnimationFrame ||
+         window.oRequestAnimationFrame ||
+         window.msRequestAnimationFrame ||
+         function(/* function FrameRequestCallback */ callback, /* DOMElement Element */ element) {
+           window.setTimeout(callback, 1000/60);
+         };
+    })();
+
+    var isMouseDown;
+    var framesPerSecond = 12;
+    var msPerFrame = 1000 / framesPerSecond;
+    var walkCycleFrameCount = 8;
+    var dirIndex = 1;
+
+    var $win;
+    var hero = {
+        heightTarget:0.15,
+        $el:undefined,
+        el:undefined,
+        walk:0,
+        w:80,
+        h:80,
+        x:0,
+        y:0,
+        scale:1,
+        direction:0
+    };
+
+    function start() {
+
+        // Listen for mouse events on canvas
+        document.addEventListener("mousedown", mouseDownHandler, true);
+        document.addEventListener("mousemove", mouseDownHandler, true);
+        document.addEventListener("mouseup", mouseUpHandler, true);
+
+        $win = $(window);
+
+        hero.scale = ($win.height() * hero.heightTarget)/hero.h;
+        hero.$el = $("#hero");
+        hero.el = hero.$el.get(0);
+
+        hero.x = ($win.width() - hero.w)/2;
+        hero.y = ($win.height() - hero.h)/2;
+
+        hero.el.style["-webkit-transform"]="translate3d("+ hero.x +'px,'+ hero.y +"px,0px) ";// scale("+hero.scale+")";
+        hero.$el.removeClass().addClass("hero_" + hero.direction +"_0");
+
+        requestAnimFrame( animate );
+    
+    }
+    
+    function animate() {
+        var animationAgeInMs = new Date().getTime();
+        var animationFrame = (Math.floor(animationAgeInMs / msPerFrame)  % walkCycleFrameCount);
+        if (isMouseDown) // do animation
+        {
+            hero.el.style["-webkit-transform"]="translate3d("+ hero.x +'px,'+ hero.y +"px,0px) ";// scale("+hero.scale+")";
+            hero.$el.removeClass().addClass("hero_" + animationFrame +"_"+ hero.direction);
+        }
+
+        requestAnimFrame( animate );
+    }
+
+    function mouseDownHandler(e) {
+
+        e.preventDefault();
+        if (e.type == "mousedown")
+            isMouseDown = true;
+
+        if (!isMouseDown)
+            return;
+        
+        var angle = Math.atan2((e.offsetX - hero.x - 40) , (e.offsetY - hero.y - 40));
+        
+
+        if (angle < 0.4 && angle > -0.4)
+            dirIndex = 6; // looking down
+        else if (angle < -0.4 && angle > -1.2)
+            dirIndex = 5; // bottom left
+        else if (angle < -1.2 && angle > -2.0)
+            dirIndex = 4; // left
+        else if (angle < -2.0 && angle > -2.8)
+            dirIndex = 3; // top left
+        else if ((angle < -2.8 && angle > -3.2) || (angle < 3.2 && angle > 2.8))
+            dirIndex = 2; // up
+        else if (angle < 2.8 && angle > 2.0)
+            dirIndex = 1; // right top
+        else if (angle < 2.0 && angle > 1.2)
+            dirIndex = 0; // right
+        else if (angle < 1.2 && angle > 0.4)
+            dirIndex = 7; // right bottom
+
+        console.log("delta["+angle+"]["+dirIndex+"]: " + (e.offsetX - hero.x - 40) + "/" + (e.offsetY - hero.y - 40));
+        hero.direction = dirIndex;
+    }
+    function mouseUpHandler(e) {
+        e.preventDefault();
+        isMouseDown = false;
+    }
+
+    </script>
+
+    <title>Photoshop and CSS transform 3D - 8 way character animation</title>
+</head>
+<body onload="start()">
+<div id="hero"></div>
+</body>
+
+</html>
