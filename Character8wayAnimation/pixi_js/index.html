@@ -86,8 +86,11 @@
 		if (!isMouseDown)
 			return;
 		
-		var angle = Math.atan2((e.offsetX - currentAnimation.position.x - 40) , (e.offsetY - currentAnimation.position.y - 40));
-		//console.log("delta["+angle+"]: " + (e.offsetX - currentAnimation.position.x - 40) + "/" + (e.offsetY - currentAnimation.position.y - 40));
+		var x = e.offsetX==undefined?e.layerX:e.offsetX;
+		var y = e.offsetY==undefined?e.layerY:e.offsetY;
+
+		var angle = Math.atan2((x - currentAnimation.position.x - 40) , (y - currentAnimation.position.y - 40));
+		console.log("delta["+angle+"]: " + (x - currentAnimation.position.x - 40) + "/" + (y - currentAnimation.position.y - 40));
 
 		if (angle < 0.4 && angle > -0.4)
             dirIndex = 3; // looking down

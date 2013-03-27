@@ -26,9 +26,6 @@
         width: 80px;
         height: 80px;
         overflow: hidden;
-        position: absolute;
-        top:0px;
-        left:0px;
     }
     .hero_0_0{ background: url('images/8way.png'); background-position:0px 0px;}
     .hero_0_1{ background: url('images/8way.png'); background-position:0px 80px;}
@@ -140,7 +137,6 @@
         hero.scale = ($win.height() * hero.heightTarget)/hero.h;
         hero.$el = $("#hero");
         hero.el = hero.$el.get(0);
-
         hero.x = ($win.width() - hero.w)/2;
         hero.y = ($win.height() - hero.h)/2;
 
@@ -171,8 +167,11 @@
 
         if (!isMouseDown)
             return;
-        
-        var angle = Math.atan2((e.offsetX - hero.x - 40) , (e.offsetY - hero.y - 40));
+    
+        var x = (e.offsetX == undefined) ? e.layerX : e.offsetX;
+        var y = (e.offsetY == undefined) ? e.layerY : e.offsetY;
+
+        var angle = Math.atan2((x - hero.x - 40) , (y - hero.y - 40));
         
 
         if (angle < 0.4 && angle > -0.4)
@@ -192,7 +191,7 @@
         else if (angle < 1.2 && angle > 0.4)
             dirIndex = 7; // right bottom
 
-        console.log("delta["+angle+"]["+dirIndex+"]: " + (e.offsetX - hero.x - 40) + "/" + (e.offsetY - hero.y - 40));
+        //console.log("delta["+angle+"]["+dirIndex+"]: " + (x - hero.x - 40) + "/" + (y - hero.y - 40));
         hero.direction = dirIndex;
     }
     function mouseUpHandler(e) {
