@@ -16,7 +16,7 @@
 **/
 var RENAUN = {
     cacheLiveTextureUpdates: {},
-    updateFrameRate: 20
+    updateFrameRate: 30
 };
     
 THREE.ImageUtils.loadTexture = function ( url, mapping, onLoad, onError ) {
@@ -62,5 +62,7 @@ RENAUN.LiveTextureUpdatePlugin = function () {
         {
             THREE.ImageUtils.loadTexture(key);  
         }
+        if (count > 300000000)
+            count = 0;
     }
 }
