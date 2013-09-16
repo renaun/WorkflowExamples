@@ -1,6 +1,6 @@
 /**
  Author: Renaun Erickson @renaun http://renaun.com
- Live ThreeJS Texture Update Plugin
+ Live three.js Texture Update Plugin
 
  Meant for development of designing textures in connection with
  Photoshop CC Generator feature.
