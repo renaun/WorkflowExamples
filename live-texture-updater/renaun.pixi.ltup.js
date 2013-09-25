@@ -7,7 +7,7 @@ var ltup_function = function() {
         // Callback code here
         var socket = io.connect('http://'+ltu_host+':9321');
         socket.on('filechange', function (data) {
-            console.log(data); // data.file is the filename
+            // data.file is the filename
             if (PIXI.TextureCache &&
                 PIXI.TextureCache[data.file] &&
                 PIXI.TextureCache[data.file].baseTexture &&
