@@ -13,6 +13,10 @@
     "tmp": {
       "version": "0.0.21",
       "from": "tmp@~0.0.20"
+    },
+    "socket.io": {
+      "version": "0.9.16",
+      "from": "socket.io@0.9.16"
     }
   }
 }

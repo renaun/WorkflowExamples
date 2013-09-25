@@ -75,7 +75,8 @@
         _currentDocumentId,
         _documentIdsWithMenuClicks = {},
         _pendingUpdates = [],
-        _runningUpdates = 0;
+        _runningUpdates = 0,
+        _serverSocket = null;
 
     function stringify(object) {
         try {
@@ -965,6 +966,8 @@
                     return utils.moveFile(tmpPath, path, true);
                 })
                 .then(function () {
+                    console.log("Defferred Resolve: " + userFolder + fileName);
+                    _serverSocket.emit('filechange', { file: userFolder + fileName });
                     imageCreatedDeferred.resolve();
                 })
                 .fail(function (err) {
@@ -1271,6 +1274,12 @@
 
                 requestEntireDocument();
             }).done();
+            
+            //
+            var io = require('socket.io').listen(9321);
+            io.sockets.on('connection', function (socket) {
+                _serverSocket = socket;
+            });
         }
         
         process.nextTick(initLater);

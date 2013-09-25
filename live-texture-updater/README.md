@@ -6,7 +6,24 @@ This plugin has the ability to added a top layer with the name of "root=./my/pat
 
 To learn more about Generator and creating your own Generator plug-ins, please visit the [Generator Core repo](https://github.com/adobe-photoshop/generator-core).
 
+### Installation
+
+Install Node.js.
+
+Copy this folder into your Applications\Adobe Photoshop CC\Plug-ins\Generator folder (if the Generator folder doesn't exist create it).
+
+In the command prompt go to Applications\Adobe Photoshop CC\Plug-ins\Generator\live-texture-updater folder and type in:
+>npm install
+
+Reload Photoshop CC.
+
 ### Usage
+
+The Live Texture Updater supporst the below specs on the Image Assets plugin, but also supports a layer with a name of "root=./my/path" or "root=/full/path/to/somewhere". If a top layer with "root=" is not found it reverts to the Image Assets plugin logic of creating a folder next to the PSD file.
+
+The other modification is you can add folder paths to the layer names of outputted images.
+
+For example if I had a PSD called GameAssets.psd located in /Games/Game1/SourceFiles/ and the following layer names. A blank layer with the name "root=../bin/images". And a group or layer with the name of "enemies/enemy1.png". I would have my enemy1.png image outputted to "/Games/Game1/bin/images/enemy1.png".
 
 The [Functional Spec](https://github.com/adobe-photoshop/generator-assets/wiki/Generate-Web-Assets-Functional-Spec)
 provides basic information about how to use the Image Assets plug-in.
