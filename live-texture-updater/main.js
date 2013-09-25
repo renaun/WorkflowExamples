@@ -967,7 +967,8 @@
                 })
                 .then(function () {
                     console.log("Defferred Resolve: " + userFolder + fileName);
-                    _serverSocket.emit('filechange', { file: userFolder + fileName });
+                    if (_serverSocket)
+                        _serverSocket.emit('filechange', { file: userFolder + fileName });
                     imageCreatedDeferred.resolve();
                 })
                 .fail(function (err) {
